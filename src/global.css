@@ -1,3 +1,30 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* font-style */
+@layer base {
+  .text01 {
+    @apply font-notoSans text-[40px] leading-none tracking-[.07em];
+  }
+  
+  .text02 {
+    @apply font-rajdhani text-[28px] leading-none tracking-[.07em] font-medium;
+  }
+
+  .text03 {
+    @apply font-notoSans text-[24px] leading-none tracking-[.07em] font-bold;
+  }
+  
+  .text04 {
+    @apply font-rajdhani text-[18px] leading-none tracking-[.07em] font-medium;
+  }
+
+  .text05 {
+    @apply font-notoSans text-[16px] leading-[1.7rem] tracking-[.07em] ;
+  }
+}
