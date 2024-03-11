@@ -7,6 +7,10 @@ export default {
         notoSans: ["Noto Sans JP", "sans-serif"],
         rajdhani: ["Rajdhani", "sans-serif"],
       },
+      colors: {
+        "black": "#000000",
+        "white": "#ffffff",
+      }
     },
   },
   plugins: [],

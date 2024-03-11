@@ -13,7 +13,7 @@
   }
   
   .text02 {
-    @apply font-rajdhani text-[28px] leading-none tracking-[.07em] font-medium;
+    @apply font-rajdhani text-[28px] leading-none tracking-[.07em] font-medium ;
   }
 
   .text03 {
