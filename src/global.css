@@ -6,8 +6,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* font-style */
 @layer base {
+  /* font-style */
   .text01 {
     @apply font-notoSans text-[40px] leading-none tracking-[.07em];
   }
@@ -26,5 +26,9 @@
 
   .text05 {
     @apply font-notoSans text-[16px] leading-[1.7rem] tracking-[.07em] ;
+  }
+
+  body {
+    @apply p-4;
   }
 }
