@@ -9,8 +9,34 @@ const Top = () => {
         <Header />
       </section>
 
+      <section className='overflow-hidden'>
+        <h1 className='font-rajdhani text-[30vw] md:text-[230px] leading-none tracking-[-.04em] font-semibold whitespace-nowrap'>WEB DESIGN PORTFOLIO</h1>
+      </section>
+
+      {/* Greeting */}
       <section>
-        <h1 className='font-rajdhani text-[30vw] leading-none tracking-[-.04em] font-semibold '>WEB DESIGN PORTFOLIO</h1>
+      </section>
+
+      {/* Works */}
+      <section>
+        <div className='flex'>
+          <div>
+            <p className='text02'>- WORKS</p>
+            <h2 className='text01'>実績紹介</h2>
+          </div>
+          <div></div>
+        </div>
+      </section>
+
+      {/* Service */}
+      <section>
+      </section>
+
+      {/* Contact */}
+      <section>
+        <p className='text02'>CONTACT</p>
+        <h2 className='text01'>お問い合わせ</h2>
+        
       </section>
 
       <section>
