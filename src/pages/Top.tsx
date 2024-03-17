@@ -12,7 +12,7 @@ const Top = () => {
       </section>
 
       <section className='overflow-hidden'>
-        <h1 className='font-rajdhani text-[30vw] md:text-[230px] leading-none tracking-[-.04em] font-semibold whitespace-nowrap'>WEB DESIGN PORTFOLIO</h1>
+        <h1 className='font-rajdhani text-[30vw] md:text-[290px] leading-none tracking-[-.04em] font-semibold whitespace-nowrap'>WEB DESIGN PORTFOLIO</h1>
       </section>
 
       {/* Greeting */}
