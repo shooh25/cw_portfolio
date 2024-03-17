@@ -40,16 +40,34 @@ const Top = () => {
             </li>
           </ul>
         </div>
+        <div className='border-black border-b py-[60px] md:py-[80px]'>
+          <p className='text05 max-w-[1000px] m-auto'>
+            Web / UI / UXデザイナー・エンジニアのKubosyohと申します。<br />
+            高クオリティなWebサイト、アプリケーションを1から制作いたします。<br />
+            「使いやすく、見やすいデザイン」を常に意識し、1つ1つ丁寧に制作しております。<br />
+            クライアント様の様々なご要望にお答えしておりますので、まずはお気軽にご相談くださいませ。
+          </p>
+        </div>
       </section>
 
       {/* Works */}
-      <section>
-        <div className='flex'>
-          <div>
-            <p className='text02'>- WORKS</p>
-            <h2 className='text01'>実績紹介</h2>
+      <section className='px-5 md:px-[50px]'>
+        <div className='border-black border-b py-[60px] md:py-[80px]'>
+          <div className='md:flex'>
+            <div className='flex flex-col'>
+              <div>
+                <p className='text02 mb-3'>- WORKS</p>
+                <h2 className='text01  mb-8'>実績紹介</h2>
+                <p className='text05'>
+                  企業のランディングページから<br />
+                  SaaSサービスのUIデザインまで、<br />
+                  幅広く手掛けております。
+                </p>
+              </div>
+            </div>
+            <div></div>
           </div>
-          <div></div>
+
         </div>
       </section>
 
