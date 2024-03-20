@@ -17,7 +17,7 @@
   }
 
   .text03 {
-    @apply font-notoSans text-[24px] leading-[140%] tracking-[.07em] font-bold;
+    @apply font-notoSans text-[24px] leading-[140%] tracking-[.07em] font-medium;
   }
   
   .text04 {
