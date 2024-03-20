@@ -23,11 +23,11 @@ const Top = () => {
       </section>
 
       <section className='overflow-hidden'>
-        <h1 className='font-rajdhani text-[30vw] md:text-[290px] leading-none tracking-[-.04em] font-semibold whitespace-nowrap'>WEB DESIGN PORTFOLIO</h1>
+        <h1 className='font-rajdhani text-[30vw] md:text-[280px] leading-none tracking-[-.04em] font-semibold whitespace-nowrap mt-[-10px]'>WEB DESIGN PORTFOLIO</h1>
       </section>
 
       {/* Greeting */}
-      <section className='px-5 md:px-[50px]'>
+      <section className='px-5 md:px-[60px]'>
         <div className='border-b border-black relative flex items-end justify-end md:justify-between pb-4'>
           <img
             src={profile} alt="kubosyoh"
@@ -51,7 +51,7 @@ const Top = () => {
             </li>
           </ul>
         </div>
-        <div className='border-black border-b py-[60px] md:py-[80px]'>
+        <div className='border-black border-b py-[60px] md:py-[80px] md:text-center'>
           <p className='text05 max-w-[1000px] m-auto'>
             Web / UI / UXデザイナー・エンジニアのKubosyohと申します。<br />
             高クオリティなWebサイト、アプリケーションを1から制作いたします。<br />
@@ -62,7 +62,7 @@ const Top = () => {
       </section>
 
       {/* Works */}
-      <section className='px-5 md:px-[50px]'>
+      <section className='px-5 md:px-[60px]'>
         <div className='border-black border-b py-[60px] md:py-[80px]'>
           <div className='grid md:grid-cols-3 '>
             <div className='flex flex-col md:col-span-1'>
@@ -93,7 +93,7 @@ const Top = () => {
       </section>
 
       {/* Service */}
-      <section className='px-5 md:px-[50px]'>
+      <section className='px-5 md:px-[60px]'>
         <div className='border-black border-b py-[60px] md:py-[80px]'>
           <div className='text-center'>
             <p className='text02 mb-3'>SERVICE</p>
@@ -102,21 +102,21 @@ const Top = () => {
           <ul className='mt-8 sm:grid sm:grid-cols-3'>
             <li className='flex flex-col items-center'>
               <img src={design} alt="design" className='block w-[70%]' />
-              <div className='mt-10 px-[26px] border-l border-black h-auto lg:h-48 xl:h-44'>
+              <div className='mt-10 px-[26px] 2xl:px-10 border-l border-black h-auto lg:h-48 xl:h-44'>
                 <h3 className='text03 mb-4'>Web/UI/UXデザイン</h3>
                 <p className='text05'>「ご希望のデザインイメージ」×「見やすく使いやすい」を掛け合わせたデザインを制作いたします。サイトのリニューアルについてもお気軽にご相談ください。</p>
               </div>
             </li>
             <li className='flex flex-col items-center'>
               <img src={coding} alt="coding" className='block w-[70%]' />
-              <div className='mt-10 px-[26px] border-l border-black h-auto lg:h-48 xl:h-44'>
+              <div className='mt-10 px-[26px] 2xl:px-10 border-l border-black h-auto lg:h-48 xl:h-44'>
                 <h3 className='text03 mb-4'>コーディング</h3>
                 <p className='text05'>デザインカンプともとに、HTML/CSSを用いてコーディングを行います。ピクセルパーフェクトを意識して、忠実にデザイン再現を行います。</p>
               </div>
             </li>
             <li className='flex flex-col items-center'>
               <img src={frontend} alt="frontend" className='block w-[70%]' />
-              <div className='mt-10 px-[26px] border-l border-black h-auto lg:h-48 xl:h-44'>
+              <div className='mt-10 px-[26px] 2xl:px-10 border-l border-black h-auto lg:h-48 xl:h-44'>
                 <h3 className='text03 mb-4'>フロントエンド開発</h3>
                 <p className='text05'>JavaScript / TypeScriptを用いたフロントエンド開発を行います。フロントエンド領域だけではなく、バックエンドの知見も持っておりますのでご安心ください。</p>
               </div>
@@ -134,7 +134,7 @@ const Top = () => {
       </section>
 
       {/* About */}
-      <section className='px-5 md:px-[50px]'>
+      <section className='px-5 md:px-[60px]'>
         <div className='border-black border-b py-[60px] md:py-[80px]'>
           <div className='grid md:grid-cols-3'>
             <div className='md:col-span-1'>
@@ -154,7 +154,7 @@ const Top = () => {
       </section>
       
       {/* Contact */}
-      <section className='px-5 md:px-[50px]'>
+      <section className='px-5 md:px-[60px]'>
         <div className='py-[60px] md:py-[80px] flex flex-col items-center'>
           <p className='text02 mb-3'>CONTACT</p>
           <h2 className='text01'>お問い合わせ</h2>
