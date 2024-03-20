@@ -1,9 +1,12 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import profile from '../images/profile.png'
+import design from "../images/service_design.png"
+import coding from "../images/service_coding.png"
+import frontend from "../images/service_frontend.png"
 import { Link } from 'react-router-dom';
 import { MdEmail } from "react-icons/md";
 import { FaTwitter } from "react-icons/fa6";
-import profile from '../images/profile.png'
 import { getWorkList } from '../apis/microcms';
 import { useQuery } from 'react-query';
 
@@ -90,12 +93,49 @@ const Top = () => {
       </section>
 
       {/* Service */}
-      <section>
+      <section className='px-5 md:px-[50px]'>
+        <div className='border-black border-b py-[60px] md:py-[80px]'>
+          <div className='text-center'>
+            <p className='text02 mb-3'>SERVICE</p>
+            <h2 className='text01'>サービス内容</h2>
+          </div>
+          <ul className='mt-8 sm:grid sm:grid-cols-3'>
+            <li className='flex flex-col items-center'>
+              <img src={design} alt="design" className='block w-[70%]' />
+              <div className='mt-10 px-[26px] border-l border-black h-auto lg:h-48 xl:h-44'>
+                <h3 className='text03 mb-4'>Web/UI/UXデザイン</h3>
+                <p className='text05'>「ご希望のデザインイメージ」×「見やすく使いやすい」を掛け合わせたデザインを制作いたします。サイトのリニューアルについてもお気軽にご相談ください。</p>
+              </div>
+            </li>
+            <li className='flex flex-col items-center'>
+              <img src={coding} alt="coding" className='block w-[70%]' />
+              <div className='mt-10 px-[26px] border-l border-black h-auto lg:h-48 xl:h-44'>
+                <h3 className='text03 mb-4'>コーディング</h3>
+                <p className='text05'>デザインカンプともとに、HTML/CSSを用いてコーディングを行います。ピクセルパーフェクトを意識して、忠実にデザイン再現を行います。</p>
+              </div>
+            </li>
+            <li className='flex flex-col items-center'>
+              <img src={frontend} alt="frontend" className='block w-[70%]' />
+              <div className='mt-10 px-[26px] border-l border-black h-auto lg:h-48 xl:h-44'>
+                <h3 className='text03 mb-4'>フロントエンド開発</h3>
+                <p className='text05'>JavaScript / TypeScriptを用いたフロントエンド開発を行います。フロントエンド領域だけではなく、バックエンドの知見も持っておりますのでご安心ください。</p>
+              </div>
+            </li>
+          </ul>
+          <div className='w-full pt-[50px] flex justify-center'>
+            <div className='border border-black max-w-[920px] text-center py-6 flex justify-center'>
+              <p className='text05 w-[85%]'>
+                スキル / HTML, CSS(SASS, Tailwind CSS),  JavaScript(React, jQuery), TypeScript, WordPress
+                ツール / Figma, AdobeXD, Photoshop, Illustrator
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Contact */}
       <section>
-        <p className='text02'>CONTACT</p>
+        <p className='text02 mb-3'>CONTACT</p>
         <h2 className='text01'>お問い合わせ</h2>
 
       </section>
