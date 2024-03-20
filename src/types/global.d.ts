@@ -9,4 +9,9 @@ interface WorkObj {
   term: string;
   link: string;
   scope: string[];
+  image: ImageObj[];
+}
+
+interface ImageObj {
+  url: string;
 }

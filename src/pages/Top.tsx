@@ -3,8 +3,14 @@ import Footer from '../components/Footer'
 import { MdEmail } from "react-icons/md";
 import { FaTwitter } from "react-icons/fa6";
 import profile from '../images/profile.png'
+import { getWorkList } from '../apis/microcms';
+import { useQuery } from 'react-query';
 
 const Top = () => {
+
+  // 実績一覧
+  const { data } = useQuery('works', getWorkList)
+
   return (
     <>
       <section className=''>
@@ -65,7 +71,15 @@ const Top = () => {
                 </p>
               </div>
             </div>
-            <div></div>
+            <div>
+              <ul>
+              {data && data.contents.map((work:WorkObj, i: string) => (
+                <li key={i}>
+                  <img src={work.image[0].url} alt={work.title} className='border-black'/>
+                </li>
+              ))}
+              </ul>
+            </div>
           </div>
 
         </div>
