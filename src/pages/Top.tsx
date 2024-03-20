@@ -152,11 +152,18 @@ const Top = () => {
           </div>
         </div>
       </section>
+      
       {/* Contact */}
-      <section>
-        <p className='text02 mb-3'>CONTACT</p>
-        <h2 className='text01'>お問い合わせ</h2>
-
+      <section className='px-5 md:px-[50px]'>
+        <div className='py-[60px] md:py-[80px] flex flex-col items-center'>
+          <p className='text02 mb-3'>CONTACT</p>
+          <h2 className='text01'>お問い合わせ</h2>
+          <p className='text-center text05 mt-8'>
+            多くのクライアント様から選ばれ、高い評価を頂いております。<br />
+            お気軽に
+            <Link to="/contact" className='border-b border-black'>お問い合わせ</Link>ください。
+          </p>
+        </div>
       </section>
 
       <section>
