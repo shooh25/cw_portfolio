@@ -1,5 +1,6 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import { Link } from 'react-router-dom';
 import { MdEmail } from "react-icons/md";
 import { FaTwitter } from "react-icons/fa6";
 import profile from '../images/profile.png'
@@ -10,6 +11,7 @@ const Top = () => {
 
   // 実績一覧
   const { data } = useQuery('works', getWorkList)
+  const works: WorkObj[] = data?.contents.slice(0, 4)
 
   return (
     <>
@@ -59,8 +61,8 @@ const Top = () => {
       {/* Works */}
       <section className='px-5 md:px-[50px]'>
         <div className='border-black border-b py-[60px] md:py-[80px]'>
-          <div className='md:flex'>
-            <div className='flex flex-col'>
+          <div className='grid md:grid-cols-3 '>
+            <div className='flex flex-col md:col-span-1'>
               <div>
                 <p className='text02 mb-3'>- WORKS</p>
                 <h2 className='text01  mb-8'>実績紹介</h2>
@@ -71,13 +73,15 @@ const Top = () => {
                 </p>
               </div>
             </div>
-            <div>
-              <ul>
-              {data && data.contents.map((work:WorkObj, i: string) => (
-                <li key={i}>
-                  <img src={work.image[0].url} alt={work.title} className='border-black'/>
-                </li>
-              ))}
+            <div className='mt-11 md:mt-0 md:col-span-2'>
+              <ul className='grid sm:grid-cols-2 gap-8'>
+                {works && works.map((work, i) => (
+                  <li key={i}>
+                    <Link to='' className='border border-black block' >
+                      <img src={work.image[0].url} alt={work.title} />
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
