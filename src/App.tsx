@@ -7,18 +7,18 @@ import Wrapper from './components/Wrapper'
 
 const App = () => {
   const queryClient = new QueryClient();
-  
+
   return (
     <QueryClientProvider client={queryClient}>
-      <Wrapper>
-        <BrowserRouter>
+      <BrowserRouter>
+        <Wrapper>
           <Routes>
             <Route path="/" element={<Top />}></Route>
             <Route path="/works" element={<Works />}></Route>
             <Route path="/about" element={<About />}></Route>
           </Routes>
-        </BrowserRouter>
-      </Wrapper>
+        </Wrapper>
+      </BrowserRouter>
     </QueryClientProvider>
 
   )
