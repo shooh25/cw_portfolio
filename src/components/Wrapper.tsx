@@ -1,4 +1,6 @@
 import React, { ReactElement } from 'react'
+import Header from './Header'
+import Footer from './Footer'
 
 interface Props {
   children: ReactElement
@@ -7,7 +9,9 @@ interface Props {
 const Wrapper: React.FC<Props> = ({ children }) => {
   return (
     <div className='bg-white border-solid border border-black relative'>
+      <Header />
       {children}
+      <Footer />
     </div>
   )
 }

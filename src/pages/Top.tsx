@@ -18,10 +18,6 @@ const Top = () => {
 
   return (
     <>
-      <section className=''>
-        <Header />
-      </section>
-
       <section className='overflow-hidden'>
         <h1 className='font-rajdhani text-[30vw] md:text-[280px] leading-none tracking-[-.04em] font-semibold whitespace-nowrap mt-[-10px]'>WEB DESIGN PORTFOLIO</h1>
       </section>
@@ -164,10 +160,6 @@ const Top = () => {
             <Link to="/contact" className='border-b border-black'>お問い合わせ</Link>ください。
           </p>
         </div>
-      </section>
-
-      <section>
-        <Footer />
       </section>
     </>
   )
