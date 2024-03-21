@@ -102,21 +102,21 @@ const Top = () => {
           <ul className='mt-8 sm:grid sm:grid-cols-3'>
             <li className='flex flex-col items-center'>
               <img src={design} alt="design" className='block w-[70%]' />
-              <div className='mt-10 px-[26px] 2xl:px-10 border-l border-black h-auto lg:h-48 xl:h-44'>
+              <div className='mt-10 px-[26px] lg:px-8 2xl:px-10 border-l border-black h-auto lg:h-48 xl:h-44'>
                 <h3 className='text03 mb-4'>Web/UI/UXデザイン</h3>
                 <p className='text05'>「ご希望のデザインイメージ」×「見やすく使いやすい」を掛け合わせたデザインを制作いたします。サイトのリニューアルについてもお気軽にご相談ください。</p>
               </div>
             </li>
             <li className='flex flex-col items-center'>
               <img src={coding} alt="coding" className='block w-[70%]' />
-              <div className='mt-10 px-[26px] 2xl:px-10 border-l border-black h-auto lg:h-48 xl:h-44'>
+              <div className='mt-10 px-[26px] lg:px-8 2xl:px-10 border-l border-black h-auto lg:h-48 xl:h-44'>
                 <h3 className='text03 mb-4'>コーディング</h3>
                 <p className='text05'>デザインカンプともとに、HTML/CSSを用いてコーディングを行います。ピクセルパーフェクトを意識して、忠実にデザイン再現を行います。</p>
               </div>
             </li>
             <li className='flex flex-col items-center'>
               <img src={frontend} alt="frontend" className='block w-[70%]' />
-              <div className='mt-10 px-[26px] 2xl:px-10 border-l border-black h-auto lg:h-48 xl:h-44'>
+              <div className='mt-10 px-[26px] lg:px-8 2xl:px-10 border-l border-black h-auto lg:h-48 xl:h-44'>
                 <h3 className='text03 mb-4'>フロントエンド開発</h3>
                 <p className='text05'>JavaScript / TypeScriptを用いたフロントエンド開発を行います。フロントエンド領域だけではなく、バックエンドの知見も持っておりますのでご安心ください。</p>
               </div>
