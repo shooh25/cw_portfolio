@@ -1,9 +1,8 @@
-import Header from '../components/Header'
-import Footer from '../components/Footer'
 import profile from '../images/profile.png'
 import design from "../images/service_design.png"
 import coding from "../images/service_coding.png"
 import frontend from "../images/service_frontend.png"
+import Button from '../components/Button'
 import { Link } from 'react-router-dom';
 import { MdEmail } from "react-icons/md";
 import { FaTwitter } from "react-icons/fa6";
@@ -62,14 +61,19 @@ const Top = () => {
         <div className='border-black border-b py-[60px] md:py-[80px]'>
           <div className='grid md:grid-cols-3 '>
             <div className='flex flex-col md:col-span-1'>
-              <div>
+              <div className='flex flex-col content-between'>
                 <p className='text02 mb-3'>- WORKS</p>
                 <h2 className='text01  mb-8'>実績紹介</h2>
-                <p className='text05'>
+                <p className='text05 mb-8'>
                   企業のランディングページから<br />
                   SaaSサービスのUIデザインまで、<br />
                   幅広く手掛けております。
                 </p>
+              </div>
+              <div>
+                <Button asChild>
+                  <Link to="/works">VIEW MORE</Link>
+                </Button>
               </div>
             </div>
             <div className='mt-11 md:mt-0 md:col-span-2'>
@@ -139,16 +143,20 @@ const Top = () => {
             </div>
             <div className='md:col-span-2 border-l border-black pl-[26px] lg:pl-[60px] mt-8 md:mt-0'>
               <h3 className='text03 mb-4'>デザインで最大限の価値を与える。</h3>
-              <p className='text05'>
+              <p className='text05 mb-[50px]'>
                 フリーランスのデザイナー/エンジニアとして活動しています。<br />
                 中小企業様、個人事業主様を中心に、ウェブ制作/開発を行っております。
               </p>
+              <div>
+                <Button asChild>
+                  <Link to="/about">VIEW MORE</Link>
+                </Button>
+              </div>
             </div>
-
           </div>
         </div>
       </section>
-      
+
       {/* Contact */}
       <section className='px-5 md:px-[60px]'>
         <div className='py-[60px] md:py-[80px] flex flex-col items-center'>
