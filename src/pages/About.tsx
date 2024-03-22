@@ -1,8 +1,11 @@
 import React from 'react'
+import MainVisual from '../components/MainVisual'
 
-const About = () => {
+const About:React.FC = () => {
   return (
-    <div>About</div>
+    <>
+      <MainVisual title="私について" span="- ABOUT"/>
+    </>
   )
 }
 
