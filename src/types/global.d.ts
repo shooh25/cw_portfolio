@@ -15,3 +15,14 @@ interface WorkObj {
 interface ImageObj {
   url: string;
 }
+
+// 記事取得パラメーター
+type SearchOptions =
+  | {
+      asList: true;
+      limit: number;
+    }
+  | {
+      asList?: false;
+      contentId: string;
+    };

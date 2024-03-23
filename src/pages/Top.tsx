@@ -6,14 +6,13 @@ import Button from '../components/Button'
 import { Link } from 'react-router-dom';
 import { MdEmail } from "react-icons/md";
 import { FaTwitter } from "react-icons/fa6";
-import { getWorkList } from '../apis/microcms';
-import { useQuery } from 'react-query';
+import { useWorkQuery } from '../hooks/useWorkList'
 
 const Top = () => {
 
   // 実績一覧
-  const { data } = useQuery('works', getWorkList)
-  const works: WorkObj[] = data?.contents.slice(0, 4)
+  const { data } = useWorkQuery({ asList: true, limit: 4 })
+  const works: WorkObj[] = data?.contents
 
   return (
     <>
