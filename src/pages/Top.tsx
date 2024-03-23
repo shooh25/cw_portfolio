@@ -6,7 +6,7 @@ import Button from '../components/Button'
 import { Link } from 'react-router-dom';
 import { MdEmail } from "react-icons/md";
 import { FaTwitter } from "react-icons/fa6";
-import { useWorkQuery } from '../hooks/useWorkList'
+import { useWorkQuery } from '../hooks/useWorkQuery'
 
 const Top = () => {
 

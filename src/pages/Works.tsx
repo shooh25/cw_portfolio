@@ -1,7 +1,7 @@
 import React from 'react'
 import MainVisual from '../components/MainVisual'
 import Tag from '../components/Tag'
-import { useWorkQuery } from '../hooks/useWorkList'
+import { useWorkQuery } from '../hooks/useWorkQuery'
 import { Link } from 'react-router-dom'
 
 const Works: React.FC = () => {
