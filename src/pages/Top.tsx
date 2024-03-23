@@ -93,7 +93,7 @@ const Top = () => {
       </section>
 
       {/* Service */}
-      <section className='px-5 md:px-[60px]'>
+      <section id='service' className='px-5 md:px-[60px]'>
         <div className='border-black border-b py-[60px] md:py-[80px]'>
           <div className='text-center'>
             <p className='text02 mb-3'>SERVICE</p>

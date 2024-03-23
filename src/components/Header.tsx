@@ -1,5 +1,5 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Header = () => {
   return (
@@ -12,22 +12,22 @@ const Header = () => {
             </Link>
           </li>
           <li className='group'>
-            <Link to='/' className='inline-block px-4 py-6 group-hover:bg-black'>
+            <Link to='/works' className='inline-block px-4 py-6 group-hover:bg-black'>
               <p className='text04 group-hover:text-white'>WORKS</p>
             </Link>
           </li>
           <li className='group'>
-            <Link to='/' className='inline-block px-4 py-6 group-hover:bg-black'>
-              <p className='text04 group-hover:text-white'>SERVICE</p>
-            </Link>
-          </li>
-          <li className='group'>
-            <Link to='/' className='inline-block px-4 py-6 group-hover:bg-black'>
+            <Link to='/about' className='inline-block px-4 py-6 group-hover:bg-black'>
               <p className='text04 group-hover:text-white'>ABOUT</p>
             </Link>
           </li>
           <li className='group'>
-            <Link to='/' className='inline-block px-4 py-6 group-hover:bg-black'>
+            <AnchorLink href='#service' className='inline-block px-4 py-6 group-hover:bg-black'>
+              <p className='text04 group-hover:text-white'>SERVICE</p>
+            </AnchorLink>
+          </li>
+          <li className='group'>
+            <Link to='/contact' className='inline-block px-4 py-6 group-hover:bg-black'>
               <p className='text04 group-hover:text-white'>CONTACT</p>
             </Link>
           </li>
