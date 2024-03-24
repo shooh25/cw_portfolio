@@ -9,7 +9,7 @@ interface WorkObj {
   term: string;
   link: string;
   scope: string[];
-  image: ImageObj[];
+  images: ImageObj[];
 }
 
 interface ImageObj {

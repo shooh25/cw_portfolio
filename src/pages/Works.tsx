@@ -31,13 +31,13 @@ const Works: React.FC = () => {
           ) : (
             works.map((work, i) => (
               <li className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10' key={i}>
-                <Link className='w-full' to="/">
-                  <img className='w-full aspect-video bg-zinc-100 object-cover border-black border' src={work.image[0].url} alt={work.title} />
+                <Link className='w-full' to={`/works/${work.id}`}>
+                  <img className='w-full aspect-video bg-zinc-100 object-cover border-black border' src={work.images[0].url} alt={work.title} />
                   <div className='mt-6'>
                     <h2 className='text03'>{work.title}</h2>
                     <div className='mt-3 flex flex-wrap gap-1.5'>
-                      {work.scope.map((tag) => (
-                        <Tag name={tag} />
+                      {work.scope.map((tag, i) => (
+                        <Tag name={tag} key={i} />
                       ))}
                     </div>
                   </div>

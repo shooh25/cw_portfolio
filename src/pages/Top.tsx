@@ -80,7 +80,7 @@ const Top = () => {
                 {works && works.map((work, i) => (
                   <li key={i}>
                     <Link to='' className='border border-black block' >
-                      <img src={work.image[0].url} alt={work.title} />
+                      <img src={work.images[0].url} alt={work.title} />
                     </Link>
                   </li>
                 ))}
