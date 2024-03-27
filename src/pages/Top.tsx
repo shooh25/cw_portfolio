@@ -11,8 +11,7 @@ import { useWorkQuery } from '../hooks/useWorkQuery'
 const Top = () => {
 
   // 実績一覧
-  const { data } = useWorkQuery({ asList: true, limit: 4 })
-  const works: WorkObj[] = data?.contents
+  const works = useWorkQuery({ asList: true, limit: 4 })
 
   return (
     <>
@@ -77,7 +76,7 @@ const Top = () => {
             </div>
             <div className='mt-11 md:mt-0 md:col-span-2'>
               <ul className='grid sm:grid-cols-2 gap-8'>
-                {works && works.map((work, i) => (
+                {Array.isArray(works) && works.map((work, i) => (
                   <li key={i}>
                     <Link to='' className='border border-black block' >
                       <img src={work.images[0].url} alt={work.title} />

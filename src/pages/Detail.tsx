@@ -9,16 +9,15 @@ const Detail: React.FC = () => {
   const navigate = useNavigate();
 
   if (contentId) {
-    const { data } = useWorkQuery({ contentId: contentId });
-    const work: WorkObj | undefined = data;
-    
+    const work = useWorkQuery({ contentId: contentId });
+
     return (
       <>
         <section className='px-5 md:px-[60px]'>
           <div className='border-b border-black py-20 md:pt-28 md:pb-20'>
             <div className='flex flex-col items-center text-center'>
               <p className='text02 mb-3'>WORKS / DETAIL</p>
-              {work ? (
+              {work && !Array.isArray(work) ? (
                 <h1 className='text01'>{work.title}</h1>
               ) : (
                 <div className='h-10 w-full max-w-[500px] bg-zinc-100' />
@@ -29,7 +28,7 @@ const Detail: React.FC = () => {
 
         <section className='px-5 md:px-[60px]'>
           <div className='border-black border-b py-[60px] md:py-[80px]'>
-            {work ? (
+            {work && !Array.isArray(work) ? (
               <div>
                 <div className='w-full flex flex-col items-center gap-10'>
                   {work.images.map((image, i) => (

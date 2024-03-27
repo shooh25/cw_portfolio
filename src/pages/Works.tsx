@@ -5,30 +5,14 @@ import { useWorkQuery } from '../hooks/useWorkQuery'
 import { Link } from 'react-router-dom'
 
 const Works: React.FC = () => {
-  const { isLoading, data } = useWorkQuery({ asList: true, limit: 10 })
-  const works: WorkObj[] = data?.contents
+  const works = useWorkQuery({ asList: true, limit: 10 })
 
   return (
     <>
       <MainVisual title="実績紹介" span="- WORKS" />
       <section className='px-5 md:px-[60px]'>
         <div className='border-black border-b py-[60px] md:py-[80px]'>
-          {isLoading ? (
-            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10'>
-              <div>
-                <div className='w-full aspect-video bg-zinc-100' />
-                <div className='h-16 bg-zinc-100 mt-6' />
-              </div>
-              <div>
-                <div className='w-full aspect-video bg-zinc-100' />
-                <div className='h-16 bg-zinc-100 mt-6' />
-              </div>
-              <div>
-                <div className='w-full aspect-video bg-zinc-100' />
-                <div className='h-16 bg-zinc-100 mt-6' />
-              </div>
-            </div>
-          ) : (
+          {works && Array.isArray(works) ? (
             works.map((work, i) => (
               <li className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10' key={i}>
                 <Link className='w-full' to={`/works/${work.id}`}>
@@ -44,6 +28,21 @@ const Works: React.FC = () => {
                 </Link>
               </li>
             ))
+          ) : (
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10'>
+              <div>
+                <div className='w-full aspect-video bg-zinc-100' />
+                <div className='h-16 bg-zinc-100 mt-6' />
+              </div>
+              <div>
+                <div className='w-full aspect-video bg-zinc-100' />
+                <div className='h-16 bg-zinc-100 mt-6' />
+              </div>
+              <div>
+                <div className='w-full aspect-video bg-zinc-100' />
+                <div className='h-16 bg-zinc-100 mt-6' />
+              </div>
+            </div>
           )}
         </div>
       </section>
