@@ -20,7 +20,7 @@ const Detail: React.FC = () => {
               {work && !Array.isArray(work) ? (
                 <h1 className='text01'>{work.title}</h1>
               ) : (
-                <div className='h-10 w-full max-w-[500px] bg-zinc-100' />
+                <div className='h-10 w-full max-w-[500px] animate-pulse bg-zinc-100' />
               )}
             </div>
           </div>
@@ -66,7 +66,7 @@ const Detail: React.FC = () => {
               </div>
             ) : (
               <div className='w-full flex flex-col items-center'>
-                <div className='w-full max-w-[900px] aspect-video bg-zinc-100' />
+                <div className='w-full max-w-[900px] aspect-video animate-pulse bg-zinc-100' />
               </div>
             )}
           </div>

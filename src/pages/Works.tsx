@@ -31,16 +31,16 @@ const Works: React.FC = () => {
           ) : (
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10'>
               <div>
-                <div className='w-full aspect-video bg-zinc-100' />
-                <div className='h-16 bg-zinc-100 mt-6' />
+                <div className='w-full aspect-video animate-pulse bg-zinc-100' />
+                <div className='h-16 animate-pulse bg-zinc-100 mt-6' />
               </div>
               <div>
-                <div className='w-full aspect-video bg-zinc-100' />
-                <div className='h-16 bg-zinc-100 mt-6' />
+                <div className='w-full aspect-video animate-pulse bg-zinc-100' />
+                <div className='h-16 bg-zinc-100 animate-pulse mt-6' />
               </div>
               <div>
-                <div className='w-full aspect-video bg-zinc-100' />
-                <div className='h-16 bg-zinc-100 mt-6' />
+                <div className='w-full aspect-video animate-pulse bg-zinc-100' />
+                <div className='h-16 bg-zinc-100 animate-pulse mt-6' />
               </div>
             </div>
           )}
