@@ -79,7 +79,7 @@ const Top = () => {
                 <ul className='grid sm:grid-cols-2 gap-8'>
                   {works.map((work, i) => (
                     <li key={i}>
-                      <Link to='' className='border border-black block w-full aspect-video' >
+                      <Link to={`/works/${work.id}`} className='border border-black block w-full aspect-video' >
                         <img src={work.images[0].url} alt={work.title} />
                       </Link>
                     </li>
@@ -95,7 +95,6 @@ const Top = () => {
               )}
             </div>
           </div>
-
         </div>
       </section>
 
