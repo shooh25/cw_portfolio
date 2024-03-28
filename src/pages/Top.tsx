@@ -75,15 +75,24 @@ const Top = () => {
               </div>
             </div>
             <div className='mt-11 md:mt-0 md:col-span-2'>
-              <ul className='grid sm:grid-cols-2 gap-8'>
-                {Array.isArray(works) && works.map((work, i) => (
-                  <li key={i}>
-                    <Link to='' className='border border-black block' >
-                      <img src={work.images[0].url} alt={work.title} />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              {works && Array.isArray(works) ? (
+                <ul className='grid sm:grid-cols-2 gap-8'>
+                  {works.map((work, i) => (
+                    <li key={i}>
+                      <Link to='' className='border border-black block w-full aspect-video' >
+                        <img src={work.images[0].url} alt={work.title} />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <ul className='grid sm:grid-cols-2 gap-8'>
+                  <li className='w-full aspect-video animate-pulse bg-zinc-100  ' />
+                  <li className='w-full aspect-video animate-pulse bg-zinc-100 ' />
+                  <li className='w-full aspect-video animate-pulse bg-zinc-100 hidden sm:block' />
+                  <li className='w-full aspect-video animate-pulse bg-zinc-100 hidden sm:block' />
+                </ul>
+              )}
             </div>
           </div>
 
