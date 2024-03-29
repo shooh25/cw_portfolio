@@ -32,7 +32,7 @@ const Detail: React.FC = () => {
               <div>
                 <div className='w-full flex flex-col items-center gap-10'>
                   {work.images.map((image, i) => (
-                    <img src={image.url} alt={work.title} className='w-full max-w-[900px] border border-black' key={i} />
+                    <img src={image.url} alt={work.title} className='w-full max-w-[900px] border border-black bg-zinc-100' key={i} />
                   ))}
                 </div>
                 <div className='w-full mt-[60px] border-l border-black pl-[30px] flex flex-col gap-[30px]'>
@@ -40,7 +40,7 @@ const Detail: React.FC = () => {
                     <div className='w-48'>
                       <h3 className='text02'>DETAIL</h3>
                     </div>
-                    <div>
+                    <div className='flex-1'>
                       <p className='text05'>{work.detail}</p>
                     </div>
                   </div>
@@ -48,7 +48,7 @@ const Detail: React.FC = () => {
                     <div className='w-48'>
                       <h3 className='text02'>TERM</h3>
                     </div>
-                    <div>
+                    <div className='flex-1'>
                       <p className='text05'>{work.term}</p>
                     </div>
                   </div>

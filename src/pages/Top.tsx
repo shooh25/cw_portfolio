@@ -79,15 +79,15 @@ const Top = () => {
                 <ul className='grid sm:grid-cols-2 gap-8'>
                   {works.map((work, i) => (
                     <li key={i}>
-                      <Link to={`/works/${work.id}`} className='border border-black block w-full aspect-video' >
-                        <img src={work.images[0].url} alt={work.title} />
+                      <Link to={`/works/${work.id}`} className='border border-black block w-full aspect-video bg-zinc-100' >
+                        <img src={work.images[0].url} alt={work.title} className='w-full h-full object-cover object-top' />
                       </Link>
                     </li>
                   ))}
                 </ul>
               ) : (
                 <ul className='grid sm:grid-cols-2 gap-8'>
-                  <li className='w-full aspect-video animate-pulse bg-zinc-100  ' />
+                  <li className='w-full aspect-video animate-pulse bg-zinc-100 ' />
                   <li className='w-full aspect-video animate-pulse bg-zinc-100 ' />
                   <li className='w-full aspect-video animate-pulse bg-zinc-100 hidden sm:block' />
                   <li className='w-full aspect-video animate-pulse bg-zinc-100 hidden sm:block' />

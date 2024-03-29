@@ -13,21 +13,23 @@ const Works: React.FC = () => {
       <section className='px-5 md:px-[60px]'>
         <div className='border-black border-b py-[60px] md:py-[80px]'>
           {works && Array.isArray(works) ? (
-            works.map((work, i) => (
-              <li className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10' key={i}>
-                <Link className='w-full' to={`/works/${work.id}`}>
-                  <img className='w-full aspect-video bg-zinc-100 object-cover border-black border' src={work.images[0].url} alt={work.title} />
-                  <div className='mt-6'>
-                    <h2 className='text03'>{work.title}</h2>
-                    <div className='mt-3 flex flex-wrap gap-1.5'>
-                      {work.scope.map((tag, i) => (
-                        <Tag name={tag} key={i} />
-                      ))}
+            <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10'>
+              {works.map((work, i) => (
+                <li key={i}>
+                  <Link className='w-full bg-zinc-100' to={`/works/${work.id}`}>
+                    <img className='w-full aspect-video bg-zinc-100 object-cover object-top border-black border' src={work.images[0].url} alt={work.title} />
+                    <div className='mt-6'>
+                      <h2 className='text03'>{work.title}</h2>
+                      <div className='mt-3 flex flex-wrap gap-1.5'>
+                        {work.scope.map((tag, i) => (
+                          <Tag name={tag} key={i} />
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                </Link>
-              </li>
-            ))
+                  </Link>
+                </li>
+              ))}
+            </ul>
           ) : (
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10'>
               <div>
