@@ -15,8 +15,9 @@ const Top = () => {
 
   return (
     <>
-      <section className='overflow-hidden'>
-        <h1 className='font-rajdhani text-[30vw] md:text-[280px] leading-none tracking-[-.04em] font-semibold whitespace-nowrap mt-[-10px]'>WEB DESIGN PORTFOLIO</h1>
+      <section className='overflow-hidden pt-2 2xl:pt-0 flex'>
+        <h1 className='font-rajdhani text-[30vw] md:text-[16vw] leading-none tracking-[-.03em] font-semibold  mt-[-10px] flex-shrink-0 whitespace-nowrap  animate-move-left'>WEB DESIGN PORTFOLIO</h1>
+        <h1 className='font-rajdhani text-[30vw] md:text-[16vw] leading-none tracking-[-.03em] font-semibold  mt-[-10px] flex-shrink-0 whitespace-nowrap  animate-move-left2'>&nbsp;WEB DESIGN PORTFOLIO</h1>
       </section>
 
       {/* Greeting */}
@@ -25,7 +26,6 @@ const Top = () => {
           <img
             src={profile} alt="kubosyoh"
             className='absolute w-[120px] md:w-[140px] left-0 top-[-30px] md:left-1/2 md:transform md:-translate-x-1/2' />
-          <p className='hidden md:block text02'>- GREETING</p>
           <ul className='flex gap-3'>
             <li>
               <a href="https://crowdworks.jp/public/employees/4381064" target='_blank' className='bg-black relative h-11 w-11 rounded-[22px] flex justify-center items-center'>
@@ -44,12 +44,14 @@ const Top = () => {
             </li>
           </ul>
         </div>
-        <div className='border-black border-b py-[60px] md:py-[80px] md:text-center'>
-          <p className='text05 max-w-[1000px] m-auto'>
-            Web / UI / UXデザイナー・エンジニアのKubosyohと申します。<br />
-            高クオリティなWebサイト、アプリケーションを1から制作いたします。<br />
-            「使いやすく、見やすいデザイン」を常に意識し、1つ1つ丁寧に制作しております。<br />
-            クライアント様の様々なご要望にお答えしておりますので、まずはお気軽にご相談くださいませ。
+        <div className='border-black border-b py-[60px] md:py-[80px] '>
+          <p className='text05 max-w-[660px] m-auto pt-2'>
+            Web / UI / UXデザイナー・エンジニアのKubosyohと申します。<br className='hidden sm:block' />
+            高クオリティなWebサイト、アプリケーションを1から制作いたします。<br className='hidden sm:block'/>
+            「使いやすく、見やすいデザイン」を常に意識し、1つ1つ丁寧に制作しております。<br className='hidden sm:block'/>
+            <br />
+            クライアント様の様々なご要望にお答えしておりますので、<br className='hidden md:block' />
+            まずはお気軽にご相談くださいませ。
           </p>
         </div>
       </section>

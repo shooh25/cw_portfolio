@@ -32,3 +32,31 @@
     @apply p-4;
   }
 }
+
+
+@keyframes move-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes move-left2 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+/* アニメーションを適用 */
+.animate-move-left {
+  animation: move-left 80s -40s infinite linear;
+}
+
+.animate-move-left2 {
+  animation: move-left2 80s infinite linear;
+}
