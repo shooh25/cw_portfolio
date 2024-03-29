@@ -33,7 +33,7 @@
   }
 }
 
-
+/* Topページタイトルアニメーション */
 @keyframes move-left {
   from {
     transform: translateX(100%);
