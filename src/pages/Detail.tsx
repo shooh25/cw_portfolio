@@ -36,12 +36,21 @@ const Detail: React.FC = () => {
                   ))}
                 </div>
                 <div className='w-full mt-[60px] border-l border-black pl-[30px] flex flex-col gap-[30px]'>
+                <div className='flex flex-col md:flex-row gap-2 md:gap-0'>
+                    <div className='w-48'>
+                      <h3 className='text02'>CLIENT</h3>
+                    </div>
+                    <div className='flex-1'>
+                      <p className='text05'>{work.client}</p>
+                    </div>
+                  </div>
                   <div className='flex flex-col md:flex-row gap-2 md:gap-0'>
                     <div className='w-48'>
                       <h3 className='text02'>DETAIL</h3>
                     </div>
                     <div className='flex-1'>
                       <p className='text05'>{work.detail}</p>
+                      {work.link && (<a href={work.link} className='text05 mt-2 inline-block border-b border-black' target='_blank' >{work.link}</a>)}
                     </div>
                   </div>
                   <div className='flex flex-col md:flex-row gap-2 md:gap-0'>
