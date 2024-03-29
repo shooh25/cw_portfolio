@@ -60,7 +60,7 @@ const Top = () => {
       <section className='px-5 md:px-[60px]'>
         <div className='border-black border-b py-[60px] md:py-[80px]'>
           <div className='grid md:grid-cols-3 '>
-            <div className='flex flex-col md:col-span-1'>
+            <div className='flex flex-col md:col-span-1 justify-between'>
               <div className='flex flex-col content-between'>
                 <p className='text02 mb-3'>- WORKS</p>
                 <h2 className='text01  mb-8'>実績紹介</h2>
@@ -78,7 +78,7 @@ const Top = () => {
             </div>
             <div className='mt-11 md:mt-0 md:col-span-2'>
               {works && Array.isArray(works) ? (
-                <ul className='grid sm:grid-cols-2 gap-8'>
+                <ul className='grid sm:grid-cols-2 gap-10'>
                   {works.map((work, i) => (
                     <li key={i}>
                       <Link to={`/works/${work.id}`} className='border border-black block w-full aspect-video bg-zinc-100' >
@@ -88,7 +88,7 @@ const Top = () => {
                   ))}
                 </ul>
               ) : (
-                <ul className='grid sm:grid-cols-2 gap-8'>
+                <ul className='grid sm:grid-cols-2 gap-10'>
                   <li className='w-full aspect-video animate-pulse bg-zinc-100 ' />
                   <li className='w-full aspect-video animate-pulse bg-zinc-100 ' />
                   <li className='w-full aspect-video animate-pulse bg-zinc-100 hidden sm:block' />
@@ -130,7 +130,7 @@ const Top = () => {
               </div>
             </li>
           </ul>
-          <div className='w-full pt-[50px] flex justify-center'>
+          <div className='w-full pt-[60px] md:pt-[80px] flex justify-center'>
             <div className='border border-black max-w-[920px] text-center py-6 flex justify-center'>
               <p className='text05 w-[85%]'>
                 スキル / HTML, CSS(SASS, Tailwind CSS),  JavaScript(React, jQuery), TypeScript, WordPress
