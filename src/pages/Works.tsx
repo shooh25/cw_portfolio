@@ -3,8 +3,18 @@ import MainVisual from '../components/MainVisual'
 import Tag from '../components/Tag'
 import { useWorkQuery } from '../hooks/useWorkQuery'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
+import { useQueryClient } from 'react-query';
+
+
 
 const Works: React.FC = () => {
+  const queryClient = useQueryClient();
+
+  useEffect(() => {
+    queryClient.clear()
+  }, [])
+  
   const works = useWorkQuery({ asList: true, limit: 10 })
 
   return (

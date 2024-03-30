@@ -7,8 +7,15 @@ import { Link } from 'react-router-dom';
 import { MdEmail } from "react-icons/md";
 import { FaTwitter } from "react-icons/fa6";
 import { useWorkQuery } from '../hooks/useWorkQuery'
+import { useQueryClient } from 'react-query';
+import { useEffect } from 'react'
 
 const Top = () => {
+  const queryClient = useQueryClient();
+  
+  useEffect(() => {
+    queryClient.clear()
+  }, [])
 
   // 実績一覧
   const works = useWorkQuery({ asList: true, limit: 4 })
@@ -47,8 +54,8 @@ const Top = () => {
         <div className='border-black border-b py-[60px] md:py-[80px] '>
           <p className='text05 max-w-[660px] m-auto pt-2'>
             Web / UI / UXデザイナー・エンジニアのKubosyohと申します。<br className='hidden sm:block' />
-            高クオリティなWebサイト、アプリケーションを1から制作いたします。<br className='hidden sm:block'/>
-            「使いやすく、見やすいデザイン」を常に意識し、1つ1つ丁寧に制作しております。<br className='hidden sm:block'/>
+            高クオリティなWebサイト、アプリケーションを1から制作いたします。<br className='hidden sm:block' />
+            「使いやすく、見やすいデザイン」を常に意識し、1つ1つ丁寧に制作しております。<br className='hidden sm:block' />
             <br />
             クライアント様の様々なご要望にお答えしておりますので、<br className='hidden md:block' />
             まずはお気軽にご相談くださいませ。
