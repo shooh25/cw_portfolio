@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
+import { useQueryClient } from 'react-query';
 import { useWorkQuery } from '../hooks/useWorkQuery';
 import Tag from '../components/Tag';
 
 
 const Detail: React.FC = () => {
+  const queryClient = useQueryClient();
   const { contentId } = useParams();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    queryClient.clear()
+  }, [])
 
   if (contentId) {
     const work = useWorkQuery({ contentId: contentId });
@@ -36,7 +42,7 @@ const Detail: React.FC = () => {
                   ))}
                 </div>
                 <div className='w-full mt-[60px] border-l border-black pl-[30px] flex flex-col gap-[30px]'>
-                <div className='flex flex-col md:flex-row gap-2 md:gap-0'>
+                  <div className='flex flex-col md:flex-row gap-2 md:gap-0'>
                     <div className='w-48'>
                       <h3 className='text02'>CLIENT</h3>
                     </div>
