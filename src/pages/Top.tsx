@@ -40,14 +40,14 @@ const Top = () => {
               </a>
             </li>
             <li>
-              <a href="" target='_blank' className='bg-black relative h-11 w-11 rounded-[22px] flex justify-center items-center'>
+              <a href="https://twitter.com/kubosyoh" target='_blank' className='bg-black relative h-11 w-11 rounded-[22px] flex justify-center items-center'>
                 <FaTwitter color='#ffffff' className='w-5 h-5' />
               </a>
             </li>
             <li>
-              <a href="mailto:kubosyoh@gmail.com?" className='bg-black relative h-11 w-11 rounded-[22px] flex justify-center items-center'>
+              <Link to="/contact" className='bg-black relative h-11 w-11 rounded-[22px] flex justify-center items-center'>
                 <MdEmail color='#ffffff' className='w-5 h-5' />
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
