@@ -29,7 +29,8 @@ const Top = () => {
 
       {/* Greeting */}
       <section className='px-5 md:px-[60px]'>
-        <div className='border-b border-black relative flex items-end justify-end md:justify-between pb-4'>
+        <div className='border-b border-black relative flex items-end justify-end md:justify-between pb-7'>
+          <div></div>
           <img
             src={profile} alt="kubosyoh"
             className='absolute w-[120px] md:w-[140px] left-0 top-[-30px] md:left-1/2 md:transform md:-translate-x-1/2' />
@@ -50,16 +51,6 @@ const Top = () => {
               </Link>
             </li>
           </ul>
-        </div>
-        <div className='border-black border-b py-[60px] md:py-[80px] '>
-          <p className='text05 max-w-[660px] m-auto pt-2'>
-            Web / UI / UXデザイナー・エンジニアのKubosyohと申します。<br className='hidden sm:block' />
-            高クオリティなWebサイト、アプリケーションを1から制作いたします。<br className='hidden sm:block' />
-            「使いやすく、見やすいデザイン」を常に意識し、1つ1つ丁寧に制作しております。<br className='hidden sm:block' />
-            <br />
-            クライアント様の様々なご要望にお答えしておりますので、<br className='hidden md:block' />
-            まずはお気軽にご相談くださいませ。
-          </p>
         </div>
       </section>
 
@@ -160,7 +151,9 @@ const Top = () => {
               <h3 className='text03 mb-4'>デザインで最大限の価値を与える。</h3>
               <p className='text05 mb-[50px]'>
                 フリーランスのデザイナー/エンジニアとして活動しています。<br />
-                中小企業様、個人事業主様を中心に、ウェブ制作/開発を行っております。
+                中小企業様、個人事業主様を中心に、ウェブ制作/開発を行っております。<br />
+                クライアント様のさまざまなご要望にお答えしておりますので、<br className='hidden sm:block'/>
+                まずはお気軽にご相談くださいませ。
               </p>
               <div>
                 <Button asChild>
