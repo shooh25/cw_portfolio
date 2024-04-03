@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from 'react-query'
+import { AnimatePresence } from 'framer-motion'
 import React, { useEffect } from 'react'
 import Top from './pages/Top'
 import Works from './pages/Works'
@@ -24,18 +25,20 @@ const App: React.FC = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <ScrollToTop />
-        <Wrapper>
-          <Routes>
-            <Route path="/" element={<Top />}></Route>
-            <Route path="/works" element={<Works />}></Route>
-            <Route path="/about" element={<About />}></Route>
-            <Route path="/contact" element={<Contact />}></Route>
-            <Route path="/works/:contentId" element={<Detail />}></Route>
-          </Routes>
-        </Wrapper>
-      </BrowserRouter>
+      <AnimatePresence mode='wait'>
+        <BrowserRouter>
+          <ScrollToTop />
+          <Wrapper>
+            <Routes>
+              <Route path="/" element={<Top />}></Route>
+              <Route path="/works" element={<Works />}></Route>
+              <Route path="/about" element={<About />}></Route>
+              <Route path="/contact" element={<Contact />}></Route>
+              <Route path="/works/:contentId" element={<Detail />}></Route>
+            </Routes>
+          </Wrapper>
+        </BrowserRouter>
+      </AnimatePresence>
     </QueryClientProvider>
 
   )
