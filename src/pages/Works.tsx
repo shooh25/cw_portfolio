@@ -5,7 +5,7 @@ import { useWorkQuery } from '../hooks/useWorkQuery'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useQueryClient } from 'react-query';
-import Transition from '../components/Transition'
+import Transition from '../components/PageTransition'
 
 
 
@@ -25,7 +25,7 @@ const Works: React.FC = () => {
         <section className='px-5 md:px-[60px]'>
           <div className='border-black border-b py-[60px] md:py-[80px]'>
             {works && Array.isArray(works) ? (
-              <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10'>
+              <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 xl:gap-12 2xl:gap-14'>
                 {works.map((work, i) => (
                   <li key={i}>
                     <Link className='w-full bg-zinc-100' to={`/works/${work.id}`}>
@@ -43,7 +43,7 @@ const Works: React.FC = () => {
                 ))}
               </ul>
             ) : (
-              <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10'>
+              <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 xl:gap-12 2xl:gap-14'>
                 <div>
                   <div className='w-full aspect-video animate-pulse bg-zinc-100' />
                   <div className='h-16 animate-pulse bg-zinc-100 mt-6' />

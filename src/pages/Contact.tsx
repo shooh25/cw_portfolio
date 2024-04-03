@@ -1,7 +1,7 @@
 import MainVisual from '../components/MainVisual'
 import Button from '../components/Button';
 import { useContactForm } from '../hooks/useContactForm';
-import Transition from '../components/Transition';
+import Transition from '../components/PageTransition';
 
 const Contact: React.FC = () => {
   const { form, emailStatusMessage, sendEmail, isDisplayPopup } = useContactForm();

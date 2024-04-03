@@ -51,7 +51,7 @@ const MainVisual: React.FC<Props> = ({ title, span }) => {
   return (
     <div className='px-5 md:px-[60px]'>
       <div className='border-b border-black py-20 md:pt-28 md:pb-20'>
-        <div className='border-r border-black pr-20 inline-block'>
+        <div className='border-r border-black pr-10 md:pr-20 inline-block'>
           <div className='relative'>
             <motion.div
               initial='initial'

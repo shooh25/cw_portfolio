@@ -2,7 +2,7 @@ import React from 'react'
 import MainVisual from '../components/MainVisual'
 import WorksImage from '../images/works.png'
 import { Link } from 'react-router-dom'
-import Transition from '../components/Transition'
+import Transition from '../components/PageTransition'
 
 const About: React.FC = () => {
   return (

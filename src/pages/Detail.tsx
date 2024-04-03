@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import { useQueryClient } from 'react-query';
 import { useWorkQuery } from '../hooks/useWorkQuery';
 import Tag from '../components/Tag';
-import Transition from '../components/Transition';
+import Transition from '../components/PageTransition';
 
 
 const Detail: React.FC = () => {

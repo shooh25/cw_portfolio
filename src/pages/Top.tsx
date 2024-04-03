@@ -3,7 +3,7 @@ import design from "../images/service_design.png"
 import coding from "../images/service_coding.png"
 import frontend from "../images/service_frontend.png"
 import Button from '../components/Button'
-import Transition from '../components/Transition'
+import Transition from '../components/PageTransition'
 import { Link } from 'react-router-dom';
 import { MdEmail } from "react-icons/md";
 import { FaTwitter } from "react-icons/fa6";
@@ -74,7 +74,7 @@ const Top = () => {
               </div>
               <div className='mt-0 md:col-span-2'>
                 {works && Array.isArray(works) ? (
-                  <ul className='grid sm:grid-cols-2 gap-10'>
+                  <ul className='grid sm:grid-cols-2 gap-10 2xl:gap-12'>
                     {works.map((work, i) => (
                       <li key={i}>
                         <Link to={`/works/${work.id}`} className='border border-black block w-full aspect-video bg-zinc-100' >
@@ -84,7 +84,7 @@ const Top = () => {
                     ))}
                   </ul>
                 ) : (
-                  <ul className='grid sm:grid-cols-2 gap-10'>
+                  <ul className='grid sm:grid-cols-2 gap-10 2xl:gap-12'>
                     <li className='w-full aspect-video animate-pulse bg-zinc-100 ' />
                     <li className='w-full aspect-video animate-pulse bg-zinc-100 ' />
                     <li className='w-full aspect-video animate-pulse bg-zinc-100 hidden sm:block' />
