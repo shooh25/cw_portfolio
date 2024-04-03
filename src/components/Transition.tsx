@@ -15,7 +15,7 @@ const Transition: React.FC<Props> = ({ children }) => {
       width: 0,
       transition: {
         ease: [0.65, 0.05, 0.36, 1],
-        duration: .8,
+        duration: .6,
       }
     },
   }
@@ -29,7 +29,7 @@ const Transition: React.FC<Props> = ({ children }) => {
       transition: {
         delay: .6,
         ease: [0.65, 0.05, 0.36, 1],
-        duration: .8,
+        duration: .6,
       }
     },
   }
