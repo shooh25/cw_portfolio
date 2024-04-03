@@ -2,11 +2,11 @@ import React from 'react'
 import MainVisual from '../components/MainVisual'
 import WorksImage from '../images/works.png'
 import { Link } from 'react-router-dom'
-import Transition from '../components/PageTransition'
+import PageTransition from '../components/PageTransition'
 
 const About: React.FC = () => {
   return (
-    <Transition>
+    <PageTransition>
       <>
         <MainVisual title="私について" span="- ABOUT" />
         <section className='px-5 md:px-[60px]'>
@@ -61,7 +61,7 @@ const About: React.FC = () => {
           </div>
         </section>
       </>
-    </Transition>
+    </PageTransition>
   )
 }
 

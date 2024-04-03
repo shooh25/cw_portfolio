@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import { useQueryClient } from 'react-query';
 import { useWorkQuery } from '../hooks/useWorkQuery';
 import Tag from '../components/Tag';
-import Transition from '../components/PageTransition';
+import PageTransition from '../components/PageTransition';
 
 
 const Detail: React.FC = () => {
@@ -19,7 +19,7 @@ const Detail: React.FC = () => {
     const work = useWorkQuery({ contentId: contentId });
 
     return (
-      <Transition>
+      <PageTransition>
         <>
           <section className='px-5 md:px-[60px]'>
             <div className='border-b border-black py-20 md:pt-28 md:pb-20'>
@@ -101,7 +101,7 @@ const Detail: React.FC = () => {
             </div>
           </section>
         </>
-      </Transition>
+      </PageTransition>
     )
 
   } else {

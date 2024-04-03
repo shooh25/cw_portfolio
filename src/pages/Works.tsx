@@ -5,7 +5,7 @@ import { useWorkQuery } from '../hooks/useWorkQuery'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useQueryClient } from 'react-query';
-import Transition from '../components/PageTransition'
+import PageTransition from '../components/PageTransition'
 
 
 
@@ -19,7 +19,7 @@ const Works: React.FC = () => {
   const works = useWorkQuery({ asList: true, limit: 10 })
 
   return (
-    <Transition>
+    <PageTransition>
       <>
         <MainVisual title="実績紹介" span="- WORKS" />
         <section className='px-5 md:px-[60px]'>
@@ -73,7 +73,7 @@ const Works: React.FC = () => {
           </div>
         </section>
       </>
-    </Transition>
+    </PageTransition>
   )
 }
 

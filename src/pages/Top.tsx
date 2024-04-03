@@ -3,7 +3,7 @@ import design from "../images/service_design.png"
 import coding from "../images/service_coding.png"
 import frontend from "../images/service_frontend.png"
 import Button from '../components/Button'
-import Transition from '../components/PageTransition'
+import PageTransition from '../components/PageTransition'
 import { Link } from 'react-router-dom';
 import { MdEmail } from "react-icons/md";
 import { FaTwitter } from "react-icons/fa6";
@@ -22,7 +22,7 @@ const Top = () => {
   const works = useWorkQuery({ asList: true, limit: 4 })
 
   return (
-    <Transition>
+    <PageTransition>
       <div>
         <section className='overflow-hidden pt-2 2xl:pt-0 flex'>
           <h1 className='font-rajdhani text-[34vw] sm:text-[28vw] md:text-[20vw] lg:text-[16vw]  leading-none tracking-[-.03em] font-semibold  mt-[-10px] flex-shrink-0 whitespace-nowrap  animate-move-left'>WEB DESIGN PORTFOLIO</h1>
@@ -176,7 +176,7 @@ const Top = () => {
           </div>
         </section>
       </div>
-    </Transition>
+    </PageTransition>
   )
 }
 

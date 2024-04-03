@@ -1,13 +1,13 @@
 import MainVisual from '../components/MainVisual'
 import Button from '../components/Button';
 import { useContactForm } from '../hooks/useContactForm';
-import Transition from '../components/PageTransition';
+import PageTransition from '../components/PageTransition';
 
 const Contact: React.FC = () => {
   const { form, emailStatusMessage, sendEmail, isDisplayPopup } = useContactForm();
 
   return (
-    <Transition>
+    <PageTransition>
       <>
         <MainVisual title='お問い合わせ' span='- CONTACT' />
         <section className='px-5 md:px-[60px]'>
@@ -42,7 +42,7 @@ const Contact: React.FC = () => {
           </div>
         )}
       </>
-    </Transition>
+    </PageTransition>
   )
 }
 

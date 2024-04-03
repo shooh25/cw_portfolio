@@ -5,7 +5,7 @@ interface Props {
   children: ReactElement
 }
 
-const Transition: React.FC<Props> = ({ children }) => {
+const PageTransition: React.FC<Props> = ({ children }) => {
 
   const whiteBox = {
     initial: {
@@ -55,4 +55,4 @@ const Transition: React.FC<Props> = ({ children }) => {
   )
 }
 
-export default Transition
+export default PageTransition
