@@ -31,24 +31,24 @@ const Top = () => {
 
         {/* Greeting */}
         <section className='px-5 md:px-[60px]'>
-          <div className='border-b border-black relative flex items-end justify-end md:justify-between pb-7'>
+          <div className='border-b border-black relative flex items-end justify-end md:justify-between pb-6'>
             <div></div>
-            <img
+            {/* <img
               src={profile} alt="kubosyoh"
-              className='absolute w-[120px] md:w-[140px] left-0 top-[-30px] md:left-1/2 md:transform md:-translate-x-1/2' />
+              className='absolute w-[120px] md:w-[140px] left-0 top-[-30px] md:left-1/2 md:transform md:-translate-x-1/2' /> */}
             <ul className='flex gap-3'>
               <li>
-                <a href="https://crowdworks.jp/public/employees/4381064" target='_blank' className='bg-black relative h-11 w-11 rounded-[22px] flex justify-center items-center'>
+                <a href="https://crowdworks.jp/public/employees/4381064" target='_blank' className='bg-black h-11 w-11 rounded-[22px] flex justify-center items-center'>
                   <p className='text-white font-rajdhani font-semibold tracking-[.07em]'>CW</p>
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/kubosyoh" target='_blank' className='bg-black relative h-11 w-11 rounded-[22px] flex justify-center items-center'>
+                <a href="https://twitter.com/kubosyoh" target='_blank' className='bg-black h-11 w-11 rounded-[22px] flex justify-center items-center'>
                   <FaTwitter color='#ffffff' className='w-5 h-5' />
                 </a>
               </li>
               <li>
-                <Link to="/contact" className='bg-black relative h-11 w-11 rounded-[22px] flex justify-center items-center'>
+                <Link to="/contact" className='bg-black h-11 w-11 rounded-[22px] flex justify-center items-center'>
                   <MdEmail color='#ffffff' className='w-5 h-5' />
                 </Link>
               </li>
