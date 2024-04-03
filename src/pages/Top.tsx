@@ -25,17 +25,13 @@ const Top = () => {
     <Transition>
       <div>
         <section className='overflow-hidden pt-2 2xl:pt-0 flex'>
-          <h1 className='font-rajdhani text-[30vw] md:text-[16vw] leading-none tracking-[-.03em] font-semibold  mt-[-10px] flex-shrink-0 whitespace-nowrap  animate-move-left'>WEB DESIGN PORTFOLIO</h1>
-          <h1 className='font-rajdhani text-[30vw] md:text-[16vw] leading-none tracking-[-.03em] font-semibold  mt-[-10px] flex-shrink-0 whitespace-nowrap  animate-move-left2'>&nbsp;WEB DESIGN PORTFOLIO</h1>
+          <h1 className='font-rajdhani text-[34vw] sm:text-[28vw] md:text-[20vw] lg:text-[16vw]  leading-none tracking-[-.03em] font-semibold  mt-[-10px] flex-shrink-0 whitespace-nowrap  animate-move-left'>WEB DESIGN PORTFOLIO</h1>
+          <h1 className='font-rajdhani text-[34vw] sm:text-[28vw] md:text-[20vw] lg:text-[16vw] leading-none tracking-[-.03em] font-semibold  mt-[-10px] flex-shrink-0 whitespace-nowrap  animate-move-left2'>&nbsp;WEB DESIGN PORTFOLIO</h1>
         </section>
 
         {/* Greeting */}
         <section className='px-5 md:px-[60px]'>
-          <div className='border-b border-black relative flex items-end justify-end md:justify-between pb-6'>
-            <div></div>
-            {/* <img
-              src={profile} alt="kubosyoh"
-              className='absolute w-[120px] md:w-[140px] left-0 top-[-30px] md:left-1/2 md:transform md:-translate-x-1/2' /> */}
+          <div className='border-b border-black relative flex items-end justify-end pb-4 sm:pb-5'>
             <ul className='flex gap-3'>
               <li>
                 <a href="https://crowdworks.jp/public/employees/4381064" target='_blank' className='bg-black h-11 w-11 rounded-[22px] flex justify-center items-center'>
@@ -59,8 +55,8 @@ const Top = () => {
         {/* Works */}
         <section className='px-5 md:px-[60px]'>
           <div className='border-black border-b py-[60px] md:py-[80px]'>
-            <div className='grid md:grid-cols-3 '>
-              <div className='flex flex-col md:col-span-1 justify-between'>
+            <div className='flex flex-col-reverse md:grid md:grid-cols-3 '>
+              <div className='flex flex-col md:col-span-1 justify-between mt-12 md:mt-0'>
                 <div className='flex flex-col content-between'>
                   <p className='text02 mb-3'>- WORKS</p>
                   <h2 className='text01  mb-8'>実績紹介</h2>
@@ -76,7 +72,7 @@ const Top = () => {
                   </Button>
                 </div>
               </div>
-              <div className='mt-11 md:mt-0 md:col-span-2'>
+              <div className='mt-0 md:col-span-2'>
                 {works && Array.isArray(works) ? (
                   <ul className='grid sm:grid-cols-2 gap-10'>
                     {works.map((work, i) => (
@@ -149,7 +145,7 @@ const Top = () => {
                 <p className='text02 mb-3'>- ABOUT</p>
                 <h2 className='text01'>私について</h2>
               </div>
-              <div className='md:col-span-2 border-l border-black pl-[26px] lg:pl-[60px] mt-8 md:mt-0'>
+              <div className='md:col-span-2 border-l border-black pl-[26px] lg:pl-[60px] mt-11 md:mt-0'>
                 <h3 className='text03 mb-4'>デザインで最大限の価値を与える。</h3>
                 <p className='text05 mb-[50px]'>
                   フリーランスのデザイナー/エンジニアとして活動しています。<br />
