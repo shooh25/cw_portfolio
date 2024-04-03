@@ -29,7 +29,12 @@ const Works: React.FC = () => {
                 {works.map((work, i) => (
                   <li key={i}>
                     <Link className='w-full bg-zinc-100' to={`/works/${work.id}`}>
-                      <img className='w-full aspect-video bg-zinc-100 object-cover object-top border-black border' src={work.images[0].url} alt={work.title} />
+                      <div className='w-full aspect-video border border-black relative'>
+                        <img
+                          className='w-full h-full object-cover object-top absolute border border-black box-content top-[-1px] left-[-1px] hover:top-[-12px] hover:left-[-12px] 2xl:hover:top-[-16px] 2xl:hover:left-[-16px] transition-all duration-200 ease-out'
+                          src={work.images[0].url}
+                          alt={work.title} />
+                      </div>
                       <div className='mt-6'>
                         <h2 className='text03'>{work.title}</h2>
                         <div className='mt-3 flex flex-wrap gap-1.5'>

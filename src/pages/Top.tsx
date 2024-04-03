@@ -1,4 +1,3 @@
-import profile from '../images/profile.png'
 import design from "../images/service_design.png"
 import coding from "../images/service_coding.png"
 import frontend from "../images/service_frontend.png"
@@ -77,8 +76,12 @@ const Top = () => {
                   <ul className='grid sm:grid-cols-2 gap-10 2xl:gap-12'>
                     {works.map((work, i) => (
                       <li key={i}>
-                        <Link to={`/works/${work.id}`} className='border border-black block w-full aspect-video bg-zinc-100' >
-                          <img src={work.images[0].url} alt={work.title} className='w-full h-full object-cover object-top' />
+                        <Link to={`/works/${work.id}`} className='border border-black block w-full aspect-video relative' >
+                          <img
+                            src={work.images[0].url}
+                            alt={work.title}
+                            className='w-full h-full object-cover object-top absolute border border-black box-content top-[-1px] left-[-1px] hover:top-[-12px] hover:left-[-12px] 2xl:hover:top-[-16px] 2xl:hover:left-[-16px] transition-all duration-200 ease-out'
+                          />
                         </Link>
                       </li>
                     ))}
