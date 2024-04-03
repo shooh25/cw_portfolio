@@ -9,7 +9,7 @@ const Transition: React.FC<Props> = ({ children }) => {
 
   const whiteBox = {
     initial: {
-      width: '100vw',
+      width: '100%',
     },
     animate: {
       width: 0,
@@ -18,14 +18,11 @@ const Transition: React.FC<Props> = ({ children }) => {
         duration: .8,
       }
     },
-    exit: {
-      width: '100vw',
-    }
   }
 
   const blackBox = {
     initial: {
-      width: '100vw',
+      width: '100%',
     },
     animate: {
       width: 0,
@@ -35,9 +32,6 @@ const Transition: React.FC<Props> = ({ children }) => {
         duration: .8,
       }
     },
-    exit: {
-      width: '100vw',
-    }
   }
 
   return (
@@ -47,7 +41,7 @@ const Transition: React.FC<Props> = ({ children }) => {
         animate='animate'
         exit='exit'
         variants={blackBox}
-        className='absolute top-0 right-[-1px] bg-black h-full z-11'
+        className='absolute top-0 right-0 bg-black h-full z-10'
       />
       <motion.div
         initial='initial'
