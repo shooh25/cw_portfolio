@@ -26,3 +26,11 @@ type SearchOptions =
       asList?: false;
       contentId: string;
     };
+
+// reacr-hook-form
+type Inputs = {
+  personalName: string;
+  companyName: string;
+  email: string;
+  message: string;
+};

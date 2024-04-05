@@ -1,42 +1,49 @@
-import React, { useRef, useState } from "react";
+import { useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 
 export const useContactForm = () => {
-  const form = useRef<HTMLFormElement | null>(null);
-  const [emailStatusMessage, setEmailStatusMessage] = useState<string>("");
-  const [isDisplayPopup, setIsDisplayPopup] = useState<boolean>(false);
+  const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<Inputs>();
 
-    if (!form.current) return;
+  const sendEmail: SubmitHandler<Inputs> = (data) => {
+    
+    const templateParams = {
+      personalName: data.personalName,
+      companyName: data.companyName,
+      email: data.email,
+      message: data.message,
+    };
 
     emailjs
-      .sendForm(
+      .send(
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID,
-        form.current,
+        templateParams,
         {
           publicKey: import.meta.env.VITE_PUBLIC_KEY,
         }
       )
       .then(
         () => {
-          setEmailStatusMessage("メールが送信されました。返信をお待ち下さい。");
-          setIsDisplayPopup(true);
+          setIsSubmitted(true);
         },
-        (error) => {
-          setEmailStatusMessage(
-            "メール送信時にエラーが発生しました。お手数ですが再度送信してください。"
-          );
-          setIsDisplayPopup(true);
+        (_error) => {
+          alert("送信時にエラーが発生しました。もう一度お試しください。");
         }
       );
-
-    setTimeout(() => {
-      setIsDisplayPopup(false);
-    }, 3000);
   };
 
-  return { form, emailStatusMessage, sendEmail, isDisplayPopup };
+  return {
+    register,
+    handleSubmit,
+    sendEmail,
+    isSubmitted,
+    formState: { errors },
+  };
 };

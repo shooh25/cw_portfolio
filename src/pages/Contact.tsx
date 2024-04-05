@@ -1,10 +1,13 @@
 import MainVisual from '../components/MainVisual'
 import Button from '../components/Button';
-import { useContactForm } from '../hooks/useContactForm';
 import PageTransition from '../components/PageTransition';
+import { useContactForm } from '../hooks/useContactForm';
+import { Navigate } from 'react-router-dom';
 
 const Contact: React.FC = () => {
-  const { form, emailStatusMessage, sendEmail, isDisplayPopup } = useContactForm();
+  const { register, handleSubmit, sendEmail, isSubmitted, formState: { errors } } = useContactForm();
+
+  if (isSubmitted) return (<Navigate to="/" />)
 
   return (
     <PageTransition>
@@ -12,19 +15,59 @@ const Contact: React.FC = () => {
         <MainVisual title='お問い合わせ' span='- CONTACT' />
         <section className='px-5 md:px-[60px]'>
           <div className='py-[60px] md:py-[80px]'>
-            <div className='max-w-[900px] m-auto'>
-              <form ref={form} onSubmit={sendEmail} className='flex flex-col gap-8 items-center'>
+            <p className='text05 text-center'>無料相談を承っております。お気軽にご連絡ください。<br />
+              下記フォームにご入力いただき、内容をご確認後、送信してください
+            </p>
+            <div className='max-w-[900px] m-auto mt-11'>
+              <form
+                onSubmit={handleSubmit(sendEmail)}
+                className='flex flex-col gap-8 items-center'
+              >
                 <div className='flex flex-col gap-3 text05 w-full'>
-                  <label>お名前 / 会社名</label>
-                  <input type="text" name="user_name" className='border border-black p-4' />
+                  <label>お名前</label>
+                  <input
+                    type="text"
+                    className='border border-black p-4'
+                    {...register('personalName', {
+                      required: 'お名前を入力してください'
+                    })}
+                  />
+                  {errors.personalName?.message && (
+                    <p className="">{errors.personalName?.message}</p>
+                  )}
+                </div>
+                <div className='flex flex-col gap-3 text05 w-full'>
+                  <label>会社名</label>
+                  <input
+                    type="text"
+                    className='border border-black p-4'
+                    {...register('companyName', {
+                      required: '会社名を入力してください'
+                    })}
+                  />
+                  {errors.companyName?.message && (
+                    <p className="error-message">{errors.companyName?.message}</p>
+                  )}
                 </div>
                 <div className='flex flex-col gap-3 text05 w-full'>
                   <label>メール</label>
-                  <input type="email" name="user_email" className='border border-black p-4' />
+                  <input
+                    type="text"
+                    className='border border-black p-4'
+                    {...register('email', {
+                      required: 'メールアドレスを入力してください'
+                    })}
+                  />
+                  {errors.email?.message && (
+                    <p className="error-message">{errors.email?.message}</p>
+                  )}
                 </div>
                 <div className='flex flex-col gap-3 text05 w-full'>
                   <label>お問い合わせ内容</label>
-                  <textarea name="message" className='border border-black p-4 h-36' />
+                  <textarea
+                    className='border border-black p-4 h-40'
+                    {...register('message')}
+                  />
                 </div>
                 <div className='flex flex-col gap-3 text05'>
                   <Button type='submit'>この内容で送信</Button>
@@ -33,14 +76,6 @@ const Contact: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {isDisplayPopup && (
-          <div className='fixed bg-black bottom-8 left-1/2 transform -translate-x-1/2'>
-            <div className='relative'>
-              <p className='text05 text-white py-4 px-10'>{emailStatusMessage}</p>
-            </div>
-          </div>
-        )}
       </>
     </PageTransition>
   )
