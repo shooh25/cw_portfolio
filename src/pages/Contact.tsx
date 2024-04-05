@@ -41,9 +41,7 @@ const Contact: React.FC = () => {
                   <input
                     type="text"
                     className='border border-black p-4'
-                    {...register('companyName', {
-                      required: '会社名を入力してください'
-                    })}
+                    {...register('companyName')}
                   />
                   {errors.companyName?.message && (
                     <p className="error-message">{errors.companyName?.message}</p>
