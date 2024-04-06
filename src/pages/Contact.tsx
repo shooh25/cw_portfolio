@@ -7,7 +7,7 @@ import { Navigate } from 'react-router-dom';
 const Contact: React.FC = () => {
   const { register, handleSubmit, sendEmail, isSubmitted, formState: { errors } } = useContactForm();
 
-  if (isSubmitted) return (<Navigate to="/" />)
+  if (isSubmitted) return (<Navigate to="/submit-success" />)
 
   return (
     <PageTransition>
