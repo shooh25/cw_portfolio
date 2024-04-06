@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { AnimatePresence } from 'framer-motion'
+import { HelmetProvider } from 'react-helmet-async'
 import React, { useEffect } from 'react'
 import Top from './pages/Top'
 import Works from './pages/Works'
@@ -27,22 +28,24 @@ const App: React.FC = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <AnimatePresence mode='wait'>
-        <BrowserRouter>
-          <ScrollToTop />
-          <Wrapper>
-            <Routes>
-              <Route path="/" element={<Top />}></Route>
-              <Route path="/works" element={<Works />}></Route>
-              <Route path="/about" element={<About />}></Route>
-              <Route path="/contact" element={<Contact />}></Route>
-              <Route path="/works/:contentId" element={<Detail />}></Route>
-              <Route path="/submit-success" element={<SubmitSuccess />}></Route>
-              <Route path="*" element={<NotFound />}></Route>
-            </Routes>
-          </Wrapper>
-        </BrowserRouter>
-      </AnimatePresence>
+      <HelmetProvider>
+        <AnimatePresence mode='wait'>
+          <BrowserRouter>
+            <ScrollToTop />
+            <Wrapper>
+              <Routes>
+                <Route path="/" element={<Top />}></Route>
+                <Route path="/works" element={<Works />}></Route>
+                <Route path="/about" element={<About />}></Route>
+                <Route path="/contact" element={<Contact />}></Route>
+                <Route path="/works/:contentId" element={<Detail />}></Route>
+                <Route path="/submit-success" element={<SubmitSuccess />}></Route>
+                <Route path="*" element={<NotFound />}></Route>
+              </Routes>
+            </Wrapper>
+          </BrowserRouter>
+        </AnimatePresence>
+      </HelmetProvider>
     </QueryClientProvider>
 
   )
