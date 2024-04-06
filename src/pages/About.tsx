@@ -33,7 +33,7 @@ const About: React.FC = () => {
             <div className='h-60 bg-zinc-100 mb-[60px]'>
               <img src={WorksImage} alt="works" className='object-cover h-full w-full' />
             </div>
-            <div className='sm:grid sm:grid-cols-3 pb-[60px] md:pb-[80px] border-b border-black'>
+            <div className='sm:grid sm:grid-cols-3 pb-[60px] md:pb-[80px] border-b border-black font-semibold'>
               <div className='border-l border-black px-[26px] lg:px-8 2xl:px-10 pb-[10px]'>
                 <p className='text05'>
                   “ 率直にレベルが高いと思います。 仕様書一つで想像を広げ、完成度の高いデザインを仕上げてくれました。”
