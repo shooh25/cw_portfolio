@@ -5,6 +5,7 @@ import { useWorkQuery } from '../hooks/useWorkQuery';
 import Tag from '../components/Tag';
 import PageTransition from '../components/PageTransition';
 import HeadBlock from "../components/HeadBlock"
+import Button from '../components/Button';
 
 const Detail: React.FC = () => {
   const queryClient = useQueryClient();
@@ -88,6 +89,11 @@ const Detail: React.FC = () => {
                     <div className='w-full max-w-[900px] aspect-video animate-pulse bg-zinc-100' />
                   </div>
                 )}
+                <div className='w-full mt-[60px] md:mt-[100px] flex justify-center'>
+                  <Button asChild>
+                    <Link to='/works'>一覧へ戻る</Link>
+                  </Button>
+                </div>
               </div>
             </section>
 
