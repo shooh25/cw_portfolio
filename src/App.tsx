@@ -9,6 +9,7 @@ import Wrapper from './components/Wrapper'
 import Contact from './pages/Contact'
 import Detail from './pages/Detail'
 import SubmitSuccess from './pages/SubmitSuccess'
+import NotFound from './pages/NotFound'
 
 const App: React.FC = () => {
   const queryClient = new QueryClient();
@@ -37,6 +38,7 @@ const App: React.FC = () => {
               <Route path="/contact" element={<Contact />}></Route>
               <Route path="/works/:contentId" element={<Detail />}></Route>
               <Route path="/submit-success" element={<SubmitSuccess />}></Route>
+              <Route path="*" element={<NotFound />}></Route>
             </Routes>
           </Wrapper>
         </BrowserRouter>
