@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 
 export const useContactForm = () => {
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
+  const [isClicked, setIsClicked] = useState<boolean>(false);
 
   const {
     register,
@@ -13,6 +14,8 @@ export const useContactForm = () => {
 
   const sendEmail: SubmitHandler<Inputs> = (data) => {
     
+    setIsClicked(true);
+
     const templateParams = {
       personalName: data.personalName,
       companyName: data.companyName,
@@ -44,6 +47,7 @@ export const useContactForm = () => {
     handleSubmit,
     sendEmail,
     isSubmitted,
+    isClicked,
     formState: { errors },
   };
 };

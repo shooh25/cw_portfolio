@@ -5,7 +5,14 @@ import { useContactForm } from '../hooks/useContactForm';
 import { Navigate } from 'react-router-dom';
 
 const Contact: React.FC = () => {
-  const { register, handleSubmit, sendEmail, isSubmitted, formState: { errors } } = useContactForm();
+  const {
+    register,
+    handleSubmit,
+    sendEmail,
+    isSubmitted,
+    isClicked,
+    formState: { errors }
+  } = useContactForm();
 
   if (isSubmitted) return (<Navigate to="/submit-success" />)
 
@@ -33,7 +40,7 @@ const Contact: React.FC = () => {
                     })}
                   />
                   {errors.personalName?.message && (
-                    <p className="">{errors.personalName?.message}</p>
+                    <p className="text-red-500">{errors.personalName?.message}</p>
                   )}
                 </div>
                 <div className='flex flex-col gap-3 text05 w-full'>
@@ -43,9 +50,6 @@ const Contact: React.FC = () => {
                     className='border border-black p-4'
                     {...register('companyName')}
                   />
-                  {errors.companyName?.message && (
-                    <p className="error-message">{errors.companyName?.message}</p>
-                  )}
                 </div>
                 <div className='flex flex-col gap-3 text05 w-full'>
                   <label>メール</label>
@@ -57,7 +61,7 @@ const Contact: React.FC = () => {
                     })}
                   />
                   {errors.email?.message && (
-                    <p className="error-message">{errors.email?.message}</p>
+                    <p className="text-red-500">{errors.email?.message}</p>
                   )}
                 </div>
                 <div className='flex flex-col gap-3 text05 w-full'>
@@ -67,8 +71,9 @@ const Contact: React.FC = () => {
                     {...register('message')}
                   />
                 </div>
-                <div className='flex flex-col gap-3 text05'>
+                <div className='flex flex-col gap-3 text05 relative'>
                   <Button type='submit'>この内容で送信</Button>
+                  {isClicked && (<div className='absolute h-full w-full bg-black opacity-25' />)}
                 </div>
               </form>
             </div>
