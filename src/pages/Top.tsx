@@ -11,7 +11,7 @@ import { useQueryClient } from 'react-query';
 import { useEffect } from 'react'
 import HeadBlock from "../components/HeadBlock"
 
-const Top = () => {
+const Top: React.FC = () => {
   const queryClient = useQueryClient();
 
   useEffect(() => {

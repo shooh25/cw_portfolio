@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className="w-full border-t border-black sm:px-14 px-4 py-[50px]">
       <div className="md:flex md:justify-between md:items-center">
