@@ -34,17 +34,17 @@ const About: React.FC = () => {
               <img src={WorksImage} alt="works" className='object-cover h-full w-full' />
             </div>
             <div className='sm:grid sm:grid-cols-3 pb-[60px] md:pb-[80px] border-b border-black font-semibold'>
-              <div className='border-l border-black px-[26px] lg:px-8 2xl:px-10 pb-[10px]'>
+              <div className='border-l border-black px-[26px] lg:px-8 2xl:px-10 pb-[20px]'>
                 <p className='text05'>
                   “ デザインはセンスが必要という言葉の通り、状況や商品を感覚的に理解され、素晴らしいデザインに仕上げてもらえました。 非常に優秀な方とお会いでき感謝いたします。”
                 </p>
               </div>
-              <div className='border-l border-black px-[26px] lg:px-8 2xl:px-10 pb-[10px]'>
+              <div className='border-l border-black px-[26px] lg:px-8 2xl:px-10 pb-[20px]'>
                 <p className='text05'>
                   “ 率直にレベルが高いと思います。 仕様書一つで想像を広げ、完成度の高いデザインを仕上げてくれました。”
                 </p>
               </div>
-              <div className='border-l border-black px-[26px] lg:px-8 2xl:px-10 pb-[10px]'>
+              <div className='border-l border-black px-[26px] lg:px-8 2xl:px-10 pb-[20px]'>
                 <p className='text05'>
                   “ 細かくていねいに、よりよいものになるよう、意見を交えて進めることができました。 おかげで理想的なデザインまで追求できたと思います。”
                 </p>
