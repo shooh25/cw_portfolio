@@ -33,21 +33,21 @@ const Top: React.FC = () => {
 
           {/* Greeting */}
           <section className='px-5 md:px-[60px]'>
-            <div className='border-b border-black relative flex items-end justify-end pb-4 sm:pb-5'>
-              <ul className='flex gap-3'>
+            <div className='border-b border-black relative pb-5 2xl:pb-7'>
+              <ul className='flex gap-3 2xl:gap-4 absolute right-0 bg-white pl-4 sm:pl-6 2xl:pl-9'>
                 <li>
-                  <a href="https://crowdworks.jp/public/employees/4381064" target='_blank' className='bg-black h-11 w-11 rounded-[22px] flex justify-center items-center'>
-                    <p className='text-white font-rajdhani font-semibold tracking-[.07em]'>CW</p>
+                  <a href="https://crowdworks.jp/public/employees/4381064" target='_blank' className='bg-black h-11 w-11 rounded-[22px] 2xl:h-14 2xl:w-14 2xl:rounded-[28px] flex justify-center items-center'>
+                    <p className='text-white font-rajdhani font-semibold tracking-[.07em] 2xl:text-[20px]'>CW</p>
                   </a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/kubosyoh" target='_blank' className='bg-black h-11 w-11 rounded-[22px] flex justify-center items-center'>
-                    <FaTwitter color='#ffffff' className='w-5 h-5' />
+                  <a href="https://twitter.com/kubosyoh" target='_blank' className='bg-black h-11 w-11 rounded-[22px] 2xl:h-14 2xl:w-14 2xl:rounded-[28px] flex justify-center items-center'>
+                    <FaTwitter color='#ffffff' className='w-5 h-5 2xl:w-6 2xl:h-6' />
                   </a>
                 </li>
                 <li>
-                  <Link to="/contact" className='bg-black h-11 w-11 rounded-[22px] flex justify-center items-center'>
-                    <MdEmail color='#ffffff' className='w-5 h-5' />
+                  <Link to="/contact" className='bg-black h-11 w-11 rounded-[22px] 2xl:h-14 2xl:w-14 2xl:rounded-[28px] flex justify-center items-center'>
+                    <MdEmail color='#ffffff' className='w-5 h-5 2xl:w-6 2xl:h-6' />
                   </Link>
                 </li>
               </ul>
@@ -56,7 +56,7 @@ const Top: React.FC = () => {
 
           {/* Works */}
           <section className='px-5 md:px-[60px]'>
-            <div className='border-black border-b py-[60px] md:py-[80px]'>
+            <div className='border-black border-b py-[60px] md:py-[80px] 2xl:pt-[100px]'>
               <div className='flex flex-col-reverse md:grid md:grid-cols-3 '>
                 <div className='flex flex-col md:col-span-1 justify-between mt-12 md:mt-0'>
                   <div className='flex flex-col content-between'>
