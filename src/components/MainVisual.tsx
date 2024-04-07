@@ -65,14 +65,14 @@ const MainVisual: React.FC<Props> = ({ title, span }) => {
               initial='initial'
               animate='animate'
               variants={blackBox}
-              className='absolute top-0 right-0 bg-black h-[81px] z-9'
+              className='absolute top-0 right-0 bg-black h-[71px] sm:h-[81px] 2xl:h-[95px] z-9'
             />
             <motion.div
               initial='initial'
               animate='animate'
               exit='exit'
               variants={whiteBox}
-              className='absolute top-0 right-0 bg-white h-[81px] z-9'
+              className='absolute top-0 right-0 bg-white h-[71px] sm:h-[81px] 2xl:h-[95px] z-9'
             />
 
           </div>

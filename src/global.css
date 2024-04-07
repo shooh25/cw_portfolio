@@ -9,15 +9,15 @@
 @layer base {
   /* font-style */
   .text01 {
-    @apply font-notoSans text-[40px] leading-none tracking-[.07em];
+    @apply font-notoSans text-[34px] sm:text-[40px] 2xl:text-[50px] leading-none tracking-[.07em];
   }
   
   .text02 {
-    @apply font-rajdhani text-[28px] leading-none tracking-[.07em] font-medium;
+    @apply font-rajdhani text-[24px] sm:text-[28px] 2xl:text-[32px] leading-none tracking-[.07em] font-medium;
   }
 
   .text03 {
-    @apply font-notoSans text-[24px] leading-[140%] tracking-[.07em] font-medium;
+    @apply font-notoSans text-[22px] sm:text-[24px] 2xl:text-[30px] leading-[140%] tracking-[.07em] font-medium;
   }
   
   .text04 {
@@ -25,7 +25,7 @@
   }
 
   .text05 {
-    @apply font-notoSans text-[14px] md:text-[16px] leading-[180%] tracking-[.07em] ;
+    @apply font-notoSans text-[14px] sm:text-[16px] 2xl:text-[20px] leading-[180%] tracking-[.07em] ;
   }
 
   body {

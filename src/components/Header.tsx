@@ -58,7 +58,7 @@ const Header: React.FC = () => {
               <AiOutlineClose size='28px' color='#ffffff' />
             </div>
           </div>
-          <nav className='pb-8'>
+          <nav className='pb-10'>
             <ul className='flex flex-col'>
               <li className='group'>
                 <Link to='/' className='inline-block p-5 group-hover:bg-black' onClick={() => setIsOpen(false)}>
