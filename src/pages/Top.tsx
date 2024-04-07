@@ -63,7 +63,7 @@ const Top: React.FC = () => {
                     <p className='text02 mb-3'>- WORKS</p>
                     <h2 className='text01  mb-8'>実績紹介</h2>
                     <p className='text05 mb-8'>
-                      企業のランディングページから<br />
+                      ランディングページのWebデザインから<br />
                       SaaSサービスのUIデザインまで、<br />
                       幅広く手掛けております。
                     </p>
@@ -76,7 +76,7 @@ const Top: React.FC = () => {
                 </div>
                 <div className='mt-0 md:col-span-2'>
                   {works && Array.isArray(works) ? (
-                    <ul className='grid sm:grid-cols-2 gap-10 2xl:gap-12'>
+                    <ul className='grid sm:grid-cols-2 gap-10 xl:gap-11 2xl:gap-14'>
                       {works.map((work, i) => (
                         <li key={i}>
                           <Link to={`/works/${work.id}`} className='border border-black block w-full aspect-video relative' >
@@ -90,7 +90,7 @@ const Top: React.FC = () => {
                       ))}
                     </ul>
                   ) : (
-                    <ul className='grid sm:grid-cols-2 gap-10 2xl:gap-12'>
+                    <ul className='grid sm:grid-cols-2 gap-10 xl:gap-11 2xl:gap-14'>
                       <li className='w-full aspect-video animate-pulse bg-zinc-100 ' />
                       <li className='w-full aspect-video animate-pulse bg-zinc-100 ' />
                       <li className='w-full aspect-video animate-pulse bg-zinc-100 hidden sm:block' />
